@@ -1,6 +1,10 @@
 package ru.innopolis.homework.homework04;
 
+import java.sql.SQLOutput;
+import java.util.Arrays;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class App {
     public static void main(String[] args) {
@@ -26,9 +30,28 @@ public class App {
             System.out.println(keyboarArray[leftIndex]);
         }
 
+        /*Задача 2. Задана последовательность, состоящая только из символов ‘>’, ‘<’ и ‘-‘. Требуется найти количество
+        стрел, которые спрятаны в этой последовательности. Стрелы – это подстроки вида ‘>>-->’ и ‘<--<<’. */
+        String arrows = ">>-->--->>-->->>>>>>--><<<<>>-->>>>>>-->-----<--<<<--<<<--<<<--<<";
+        Pattern pattern = Pattern.compile("<--<<|>>-->");
+        Matcher matcher = pattern.matcher(arrows);
+        int count = 0;
+        while (matcher.find()) {
+            count++;
+        }
+        System.out.println("Задача 2. Количество найденных стрел:" + count);
 
-
-
+        /* Задача 3. Задана строка, состоящая из букв английского алфавита, разделенных одним пробелом.
+        Необходимо каждую последовательность символов упорядочить по возрастанию и вывести слова в нижнем регистре.*/
+        String input = "bca cba";
+        String[] strings = input.split(" ");
+        String output = "";
+        for (int i = 0; i < strings.length; i++) {
+            char[] chars = strings[i].toCharArray();
+            Arrays.sort(chars);
+            output = output + new String(chars);
+        }
+        System.out.println("Задача 3. Результат:" + output);
     }
 
 }
