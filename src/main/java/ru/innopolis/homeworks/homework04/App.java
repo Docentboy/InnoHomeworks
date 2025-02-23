@@ -1,6 +1,5 @@
-package ru.innopolis.homework.homework04;
+package ru.innopolis.homeworks.homework04;
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.regex.Matcher;
@@ -10,7 +9,7 @@ public class App {
     public static void main(String[] args) {
 
         /* Задача 1. Для введенной с клавиатуры буквы английского алфавита нужно вывести слева стоящую букву на стандартной клавиатуре.
-        При этом клавиатура замкнута, т.е.справа от буквы «p» стоитбуква «a», а слева от "а" буква "р",также соседними
+        При этом клавиатура замкнута, т.е.справа от буквы «p» стоитбуква «a», а слева от "а" буква "р", также соседними
         считаются буквы «l» и буква «z», а буква «m» с буквой «q».*/
 
         final String keyboard = "qwertyuiopasdfghjklzxcvbnm";
@@ -22,8 +21,9 @@ public class App {
         int leftIndex = 0;
         for (int i = 0; i < keyboarArray.length; i++) {
             if (keyboarArray[i] == letter) {
-                if (i == 0) { leftIndex = keyboarArray.length - 1; }
-                else leftIndex = i - 1;
+                if (i == 0) {
+                    leftIndex = keyboarArray.length - 1;
+                } else leftIndex = i - 1;
             }
         }
         if (leftIndex >= 0) {
@@ -43,7 +43,7 @@ public class App {
 
         /* Задача 3. Задана строка, состоящая из букв английского алфавита, разделенных одним пробелом.
         Необходимо каждую последовательность символов упорядочить по возрастанию и вывести слова в нижнем регистре.*/
-        String input = "bca cba";
+        String input = "BCA cba";
         String[] strings = input.split(" ");
         String output = "";
         for (int i = 0; i < strings.length; i++) {
@@ -51,7 +51,7 @@ public class App {
             Arrays.sort(chars);
             output = output + new String(chars);
         }
-        System.out.println("Задача 3. Результат:" + output);
+        System.out.println("Задача 3. Результат:" + output.toLowerCase());
     }
 
 }

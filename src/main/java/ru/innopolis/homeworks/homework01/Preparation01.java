@@ -1,4 +1,4 @@
-package ru.innopolis.homework.homework01;
+package ru.innopolis.homeworks.homework01;
 
 public class Preparation01 {
     public static void main(String[] args) {

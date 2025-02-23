@@ -1,4 +1,4 @@
-package ru.innopolis.homework.homework03;
+package ru.innopolis.homeworks.homework03;
 
 public class Television {
     public Television() {
