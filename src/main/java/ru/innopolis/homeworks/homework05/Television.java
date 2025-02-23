@@ -3,8 +3,6 @@ package ru.innopolis.homeworks.homework05;
 import java.util.Objects;
 
 public class Television {
-    public Television() {
-    }
 
     public Television(String brand, String model, int size, int price, int channel, int volume, boolean switchedon) {
         this.brand = brand;
@@ -56,6 +54,30 @@ public class Television {
         this.price = price;
     }
 
+    public int getChannel() {
+        return channel;
+    }
+
+    public void setChannel(int channel) {
+        this.channel = channel;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
+
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
+    public boolean isSwitchedon() {
+        return switchedon;
+    }
+
+    public void setSwitchedon(boolean switchedon) {
+        this.switchedon = switchedon;
+    }
+
     @Override
     public String toString() {
         return "Television{" +
@@ -80,4 +102,5 @@ public class Television {
     public int hashCode() {
         return Objects.hash(brand, model, size, price, channel, volume, switchedon);
     }
+
 }
